@@ -1,0 +1,73 @@
+body {
+    background-color: #FFF8E1;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-container img {
+    width: 250px;
+    height: auto;
+}
+
+.enlace-principal {
+    text-align: center;
+}
+
+.welcome-message {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 30px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.recipe-intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-links {
+    text-align: center;
+}
+
+.recipe-links h3 {
+    margin: 0;
+}
+
+.recipe-links a {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
