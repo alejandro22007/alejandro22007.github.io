@@ -1,0 +1,228 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.encabezado {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.encabezado h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.encabezado h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Estilos generales de secciones */
+section {
+    border: 2px solid #000;
+    margin-bottom: 0;
+    padding: 15px;
+}
+
+.titulo-seccion {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    position: relative;
+    top: -23px;
+    left: 5px;
+}
+
+/* Sección Datos Personales */
+.seccion-datos-personales {
+    background-color: #c0c0c0;
+}
+
+/* Sección Forma de Acceso */
+.seccion-forma-acceso {
+    background-color: #f5d4b3;
+}
+
+/* Sección Documentos */
+.seccion-documentos {
+    background-color: #c89898;
+}
+
+/* Filas de campos */
+.fila-campos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo-largo {
+    flex: 2;
+}
+
+.grupo-campo label {
+    font-size: 14px;
+    margin-bottom: 3px;
+    font-weight: normal;
+}
+
+.grupo-campo input[type="text"],
+.grupo-campo select {
+    padding: 5px;
+    border: 1px solid #666;
+    background-color: #ffffff;
+    font-size: 13px;
+}
+
+.grupo-campo select {
+    cursor: pointer;
+}
+
+/* Opciones de acceso */
+.opciones-acceso {
+    margin-top: -5px;
+}
+
+.opcion-radio {
+    margin-bottom: 15px;
+}
+
+.opcion-radio input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.label-principal {
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* Subopciones */
+.subopciones {
+    margin-left: 25px;
+    margin-top: 8px;
+}
+
+.subopcion {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.subopcion input[type="radio"] {
+    margin-right: 5px;
+}
+
+.subopcion label {
+    font-size: 14px;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.campo-texto-inline {
+    padding: 4px 6px;
+    border: 1px solid #666;
+    background-color: #ffffff;
+    font-size: 13px;
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Opciones de documentos */
+.opciones-documentos {
+    margin-top: -5px;
+}
+
+.checkbox-grupo {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-grupo input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.checkbox-grupo label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.checkbox-con-texto {
+    align-items: center;
+}
+
+.checkbox-con-texto .campo-texto-inline {
+    max-width: 280px;
+}
+
+/* Contenedor de botones */
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.boton {
+    padding: 8px 20px;
+    font-size: 14px;
+    border: 2px solid #000;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.boton:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .fila-campos {
+        flex-direction: column;
+    }
+    
+    .contenedor-botones {
+        flex-direction: column;
+    }
+    
+    .boton {
+        width: 100%;
+    }
+    
+    .campo-texto-inline {
+        max-width: 100%;
+    }
+}

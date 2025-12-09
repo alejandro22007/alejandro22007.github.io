@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de reserva para restaurante. Realiza tu reserva de forma rápida y sencilla indicando fecha, hora y número de comensales.">
+    <meta name="keywords" content="reserva, restaurante, booking, mesa, comida, gastronomía">
+    <meta name="author" content="Restaurante">
+    <meta name="robots" content="index, follow">
+    <title>Haz una Reserva - Formulario de Reserva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="titulo-sitio">Restaurante - Actividades</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="#reserva">Formulario de Reserva</a></li>
+                <li><a href="#mensaje">Formulario de Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+        <section id="reserva" class="seccion-formulario">
+            <article class="tarjeta-reserva">
+                <header class="encabezado-formulario">
+                    <h2 class="titulo-principal">Haz una reserva</h2>
+                    <button class="boton-cerrar" aria-label="Cerrar formulario">×</button>
+                </header>
+
+                <form class="formulario-reserva" action="#" method="post">
+                    <div class="fila-formulario">
+                        <div class="grupo-input">
+                            <input type="text" id="nombre" name="nombre" class="campo-texto" placeholder="Su nombre" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="number" id="clientes" name="clientes" class="campo-texto" placeholder="Número de clientes" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario">
+                        <div class="grupo-input">
+                            <input type="email" id="email" name="email" class="campo-texto" placeholder="Su correo electrónico" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="tel" id="telefono" name="telefono" class="campo-texto" placeholder="Su teléfono" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario">
+                        <div class="grupo-input">
+                            <input type="date" id="fecha" name="fecha" class="campo-texto" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="time" id="hora" name="hora" class="campo-texto" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input">
+                            <textarea id="mensaje" name="mensaje" class="campo-texto campo-mensaje" placeholder="Su mensaje" rows="4"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-boton">
+                        <button type="submit" class="boton-enviar">SOLICITAR RESERVA</button>
+                    </div>
+
+                    <footer class="pie-formulario">
+                        <p class="texto-privacidad">Si desea saber cómo protegemos sus datos, consulte nuestra <a class="enlace-privacidad">Política de privacidad</a></p>
+                    </footer>
+                </form>
+            </article>
+        </section>
+
+        <section id="mensaje" class="seccion-formulario">
+            <article class="tarjeta-mensaje">
+                <header class="encabezado-formulario">
+                    <h2 class="titulo-principal">Envíenos su mensaje</h2>
+                    <button class="boton-cerrar" aria-label="Cerrar formulario">×</button>
+                </header>
+
+                <form class="formulario-mensaje" action="#" method="post">
+                    <div class="fila-formulario">
+                        <div class="grupo-input">
+                            <input type="text" id="nombre-msg" name="nombre" class="campo-texto" placeholder="Su nombre" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="email" id="email-msg" name="email" class="campo-texto" placeholder="Su correo electrónico" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="tel" id="telefono-msg" name="telefono" class="campo-texto" placeholder="Su teléfono" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input">
+                            <input type="text" id="asunto" name="asunto" class="campo-texto" placeholder="Asunto" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input grupo-contador">
+                            <textarea id="mensaje-contacto" name="mensaje" class="campo-texto campo-mensaje-grande" placeholder="Su mensaje" rows="8" maxlength="500" required></textarea>
+                            <span class="contador-caracteres">0 / 500</span>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-boton-derecha">
+                        <button type="submit" class="boton-enviar">ENVIAR</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="pie-formulario">
+        <p>Alejandro Salido Marqués</p>
+    </footer>
+
+    <script>
+        const textarea = document.getElementById('mensaje-contacto');
+        const contador = document.querySelector('.contador-caracteres');
+        
+        textarea.addEventListener('input', function() {
+            const longitud = this.value.length;
+            contador.textContent = longitud + ' / 500';
+        });
+    </script>
+</body>
+</html>
