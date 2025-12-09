@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para escribir una reseña de los platos del Restaurante El Rincón de Alex">
+    <meta name="keywords" content="reseña, opinión, restaurante, tortilla de patatas, paella valenciana, gazpacho andaluz">
+    <meta name="Alejandro" content="Restaurante El Rincón de Alex">
+    <meta name="robots" content="index, follow">
+    <title>Hacer Reseña de un Plato</title>
+    <link rel="stylesheet" href="estilos3.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="titulo-principal">HACER RESEÑA DE UN PLATO</h1>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="seccion-formulario">
+            <article class="tarjeta-reserva">
+                <header class="encabezado-formulario">
+                    <h2 class="titulo-principal">Seleccione un plato y escriba su reseña</h2>
+                </header>
+
+                <form class="formulario-resena" action="#" method="post">
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input">
+                            <label for="plato">Plato:</label>
+                            <select id="plato" name="plato" class="campo-texto" required>
+                                <option value="">-- Seleccione un plato --</option>
+                                <option value="tortilla">Tortilla de Patatas</option>
+                                <option value="paella">Paella Valenciana</option>
+                                <option value="gazpacho">Gazpacho Andaluz</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input">
+                            <label for="reseña">Su reseña:</label>
+                            <textarea id="reseña" name="reseña" class="campo-texto campo-mensaje-grande" placeholder="Escriba aquí su reseña..." rows="6" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-boton">
+                        <button type="submit" class="boton-enviar">ENVIAR RESEÑA</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+    <nav class="enlace-principal">
+            <a href="./index.html">Volver al Menú Principal</a>
+   </nav>
+    <footer class="pie-pagina">
+        <p class="footer">Alejandro Salido Marqués</p>
+    </footer>
+</body>
+</html>
