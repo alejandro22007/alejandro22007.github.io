@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto para restaurante. Envía tu mensaje de forma rápida y sencilla.">
+    <meta name="keywords" content="contacto, restaurante, mensaje, gastronomía">
+    <meta name="author" content="Restaurante">
+    <meta name="robots" content="index, follow">
+    <title>Envíenos su Mensaje - Formulario de Contacto</title>
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+<body>
+    <header class="encabezado">
+        <h1 class="titulo-sitio">Restaurante - Actividades</h1>
+        
+    </header>
+
+    <main class="contenedor-principal">
+        <section id="mensaje" class="seccion-formulario">
+            <article class="tarjeta-mensaje">
+                <header class="encabezado-formulario">
+                    <h2 class="titulo-principal">Envíenos su mensaje</h2>
+                    <button class="boton-cerrar" aria-label="Cerrar formulario">×</button>
+                </header>
+
+                <form class="formulario-mensaje" action="#" method="post">
+                    <div class="fila-formulario">
+                        <div class="grupo-input">
+                            <input type="text" id="nombre-msg" name="nombre" class="campo-texto" placeholder="Su nombre" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="email" id="email-msg" name="email" class="campo-texto" placeholder="Su correo electrónico" required>
+                        </div>
+                        <div class="grupo-input">
+                            <input type="tel" id="telefono-msg" name="telefono" class="campo-texto" placeholder="Su teléfono" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input">
+                            <input type="text" id="asunto" name="asunto" class="campo-texto" placeholder="Asunto" required>
+                        </div>
+                    </div>
+
+                    <div class="fila-formulario fila-completa">
+                        <div class="grupo-input grupo-contador">
+                            <textarea id="mensaje-contacto" name="mensaje" class="campo-texto campo-mensaje-grande" placeholder="Su mensaje" rows="8" maxlength="500" required></textarea>
+                            <span class="contador-caracteres">0 / 500</span>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-boton-derecha">
+                        <button type="submit" class="boton-enviar">ENVIAR</button>
+                    </div>
+                    <nav class="enlace-principal">
+                        <a href="./index.html">Volver al Menú Principal</a>
+                    </nav>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+            <p class="footer">Alejandro Salido Marqués</p>
+        </footer>
+    
+    <script>
+        const textarea = document.getElementById('mensaje-contacto');
+        const contador = document.querySelector('.contador-caracteres');
+        
+        textarea.addEventListener('input', function() {
+            const longitud = this.value.length;
+            contador.textContent = longitud + ' / 500';
+        });
+    </script>
+</body>
+</html>

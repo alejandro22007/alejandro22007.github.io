@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de inscripción para ciclos formativos de grado superior en Huelva">
+    <meta name="keywords" content="inscripción, ciclos formativos, grado superior, educación, Huelva">
+    <meta name="author" content="Centro Educativo">
+    <title>Hoja de Inscripción - Ciclos Formativos Grado Superior</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <header class="encabezado">
+            <h1>HOJA DE INSCRIPCION</h1>
+            <h2>EN LOS CICLOS FORMATIVOS DE GRADO SUPERIOR</h2>
+        </header>
+
+        <form class="formulario-inscripcion" action="#" method="post">
+            <section class="seccion-datos-personales">
+                <h3 class="titulo-seccion">Datos Personales</h3>
+                
+                <div class="fila-campos">
+                    <div class="grupo-campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni" required>
+                    </div>
+                </div>
+
+                <div class="fila-campos">
+                    <div class="grupo-campo">
+                        <label for="localidad">Localidad de Nacimiento:</label>
+                        <input type="text" id="localidad" name="localidad" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="provincia">Provincia:</label>
+                        <select id="provincia" name="provincia" required>
+                            <option value="Huelva">Huelva</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Cádiz">Cádiz</option>
+                            <option value="Málaga">Málaga</option>
+                        </select>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="fecha">Fecha de Nacimiento:</label>
+                        <input type="text" id="fecha" name="fecha" placeholder="dd/mm/aaaa" required>
+                    </div>
+                </div>
+
+                <div class="fila-campos">
+                    <div class="grupo-campo campo-largo">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="codigo">Código Postal:</label>
+                        <input type="text" id="codigo" name="codigo" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-forma-acceso">
+                <h3 class="titulo-seccion">Forma de Acceso</h3>
+                
+                <div class="opciones-acceso">
+                    <div class="opcion-radio">
+                        <input type="radio" id="directo" name="acceso" value="directo">
+                        <label for="directo" class="label-principal">Directo</label>
+                        
+                        <div class="subopciones">
+                            <div class="subopcion">
+                                <input type="radio" id="bachillerato" name="tipo-directo" value="bachillerato">
+                                <label for="bachillerato">Bachillerato Log Modalidad</label>
+                                <input type="text" class="campo-texto-inline">
+                            </div>
+                            
+                            <div class="subopcion">
+                                <input type="radio" id="experimental" name="tipo-directo" value="experimental">
+                                <label for="experimental">Experimental</label>
+                            </div>
+                            
+                            <div class="subopcion">
+                                <input type="radio" id="cou" name="tipo-directo" value="cou">
+                                <label for="cou">COU Opción</label>
+                                <input type="text" class="campo-texto-inline">
+                            </div>
+                            
+                            <div class="subopcion">
+                                <input type="radio" id="fp2" name="tipo-directo" value="fp2">
+                                <label for="fp2">FP2</label>
+                            </div>
+                            
+                            <div class="subopcion">
+                                <input type="radio" id="otros-directo" name="tipo-directo" value="otros">
+                                <label for="otros-directo">Otros (especifique)</label>
+                                <input type="text" class="campo-texto-inline">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="opcion-radio">
+                        <input type="radio" id="prueba-libre" name="acceso" value="prueba-libre">
+                        <label for="prueba-libre" class="label-principal">Prueba Libre</label>
+                    </div>
+                </div>
+            </section>
+            <section class="seccion-documentos">
+                <h3 class="titulo-seccion">Documentos Adjuntados</h3>
+                
+                <div class="opciones-documentos">
+                    <div class="checkbox-grupo">
+                        <input type="checkbox" id="fotocopia" name="fotocopia">
+                        <label for="fotocopia">Fotocopia DNI</label>
+                    </div>
+                    
+                    <div class="checkbox-grupo">
+                        <input type="checkbox" id="certificado" name="certificado">
+                        <label for="certificado">Certificado Académico</label>
+                    </div>
+                    
+                    <div class="checkbox-grupo checkbox-con-texto">
+                        <input type="checkbox" id="otros-docs" name="otros-docs">
+                        <label for="otros-docs">Otros documentos (especifique)</label>
+                        <input type="text" class="campo-texto-inline">
+                    </div>
+                </div>
+            </section>
+
+            <div class="contenedor-botones">
+                <button type="submit" class="boton">Enviar Solicitud</button>
+                <button type="reset" class="boton">Limpiar datos</button>
+            </div>
+            <br><nav class="enlace-principal">
+                <a href="../index.html">Volver al Menú Principal</a>
+            </nav></br>
+        </form>
+        <footer class="pie-pagina">
+            <p class="footer">Alejandro Salido Marqués</p>
+        </footer>
+    </main>
+</body>
+</html>
