@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: hsl(300, 43%, 22%);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+#contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: hsl(300, 43%, 22%);
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    color: hsl(303, 10%, 53%);
+    font-size: 1.1rem;
+}
+
+.calificaciones {
+    margin-bottom: 50px;
+}
+
+.puntuacion {
+    background-color: hsl(300, 24%, 96%);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.puntuacion .estrellas {
+    color: #ffa500;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.texto-puntuacion {
+    font-weight: bold;
+    color: hsl(300, 43%, 22%);
+}
+
+.testimonios {
+    display: block;
+}
+
+.tarjeta-testimonio {
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.info-cliente {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto-cliente {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.datos-cliente h2 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.comprador-verificado {
+    color: hsl(333, 80%, 67%);
+    font-size: 0.9rem;
+}
+
+.texto-testimonio {
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.atribucion {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: hsl(303, 10%, 53%);
+}
+
+a {
+    color: hsl(300, 43%, 22%);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 40px 20px;
+    }
+    
+    header {
+        text-align: left;
+        float: left;
+        width: 45%;
+    }
+    
+    .calificaciones {
+        float: right;
+        width: 50%;
+        margin-top: 20px;
+    }
+    
+    .testimonios {
+        clear: both;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .tarjeta-testimonio {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .tarjeta-testimonio + .tarjeta-testimonio {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .puntuacion {
+        display: flex;
+        align-items: center;
+    }
+    
+    .tarjeta-testimonio:nth-child(2) {
+        margin-top: 20px;
+    }
+    
+    .tarjeta-testimonio:nth-child(3) {
+        margin-top: 40px;
+    }
+}
+
+.texto-testimonio {
+    text-align: left;
+    text-indent: 0;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-variant: normal;
+}
+
+.tarjeta-testimonio {
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+}
+
+.tarjeta-testimonio {
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.testimonios::after {
+    content: "";
+    display: table;
+    clear: both;
+}

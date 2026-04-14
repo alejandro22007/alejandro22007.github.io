@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Syne:wght@700;800&display=swap');
+
+:root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --accent-html: #f78166;
+    --accent-head: #79c0ff;
+    --accent-body: #56d364;
+    --accent-text: #ffa657;
+    --accent-other: #d2a8ff;
+    --line: #30363d;
+    --white: #e6edf3;
+    --muted: #8b949e;
+    --node-bg: #1c2128;
+    --node-hover: #21262d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+    font-family: 'Fira Code', monospace;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, var(--accent-html), var(--accent-blue, #79c0ff), var(--accent-other));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    letter-spacing: 0.05em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#arbol-dom {
+    width: 100%;
+    max-width: 900px;
+    overflow-x: auto;
+}
+
+ul.dom-tree {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.dom-tree ul {
+    list-style: none;
+    padding-left: 2rem;
+    margin-left: 1rem;
+    border-left: 2px dashed var(--line);
+    position: relative;
+}
+
+ul.dom-tree ul li {
+    position: relative;
+    margin: 0.4rem 0;
+}
+
+ul.dom-tree ul li::before {
+    content: '';
+    position: absolute;
+    left: -1.05rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.9rem;
+    height: 2px;
+    background-color: var(--line);
+}
+
+.nodo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--node-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.35rem 0.75rem;
+    cursor: default;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+    max-width: 100%;
+}
+
+.nodo:hover {
+    background-color: var(--node-hover);
+    transform: translateX(3px);
+}
+
+.nodo .icono {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.nodo .etiqueta {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.nodo .contenido {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    max-width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tipo-html    { border-left: 4px solid var(--accent-html);   }
+.tipo-html    .etiqueta { color: var(--accent-html); }
+
+.tipo-head    { border-left: 4px solid var(--accent-head);   }
+.tipo-head    .etiqueta { color: var(--accent-head); }
+
+.tipo-body    { border-left: 4px solid var(--accent-body);   }
+.tipo-body    .etiqueta { color: var(--accent-body); }
+
+.tipo-text    { border-left: 4px solid var(--accent-text);   }
+.tipo-text    .etiqueta { color: var(--accent-text); }
+
+.tipo-otro    { border-left: 4px solid var(--accent-other);  }
+.tipo-otro    .etiqueta { color: var(--accent-other); }
+
+#leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+#leyenda span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#leyenda .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot-html  { background: var(--accent-html); }
+.dot-head  { background: var(--accent-head); }
+.dot-body  { background: var(--accent-body); }
+.dot-text  { background: var(--accent-text); }
+.dot-otro  { background: var(--accent-other); }
+
+.nodo {
+    animation: fadeIn 0.3s ease both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-8px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
